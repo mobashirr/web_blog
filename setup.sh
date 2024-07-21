@@ -22,4 +22,14 @@ pip install flask
 
 
 # pip install flask-wtf
-# this is lib comoon used in flask to create a validation pages like registeration and login pages
+# flask-wtf is an extension for Flask that integrates the powerful form-handling capabilities of the WTForms library.
+# It simplifies the process of creating and validating web forms in Flask 
+
+
+# to create random string in python
+# import secrets
+# secrets.token_hex(16)
+
+
+# if there is problem with email validator install this:
+# pip install email_validator
