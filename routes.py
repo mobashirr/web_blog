@@ -1,28 +1,27 @@
 
-# simple flask app:
-
-from flask import Flask, render_template, url_for,flash,redirect
-from forms import RegistrationForm, loginForm
+''' routes module '''
 
 
-app = Flask(__name__)
+from mobash_blog.forms import RegistrationForm, loginForm
+from mobash_blog import app
+from flask import render_template, url_for,flash,redirect
 
-app.config['SECRET_KEY'] = 'b54af37ce9b4df9c42b12577ad7fd3fe'
 
 data = [
     {
-        'author': 'Corey Schafer',
+        'author': 'mohamed bashir',
         'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
+        'content': 'this is my First post ',
+        'date_posted': 'JULY 20, 2024'
     },
     {
         'author': 'Jane Doe',
         'title': 'Blog Post 2',
         'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
+        'date_posted': 'JULY 21, 2024'
     }
 ]
+
 
 # the decorator route is what you type in the url to get this web page 
 @app.route("/")
@@ -62,6 +61,3 @@ def login():
              flash(f"your email or password isn't correct", 'danger')
 
     return render_template('login.html', title=title, form=form)
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000) # run with the debug mode

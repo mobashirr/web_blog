@@ -18,7 +18,7 @@ pip install flask
 # export FLASK_DEBUG=1
 
 
-# template inhirtance is good way to not repwat yourself and give flixabilty to change very easy
+# template inhertance is good way to not repwat yourself and give flixabilty to change very easy
 
 
 # pip install flask-wtf
@@ -33,3 +33,14 @@ pip install flask
 
 # if there is problem with email validator install this:
 # pip install email_validator
+
+
+# the database:
+# we used the sqlalckemy extention for flask
+# you have to install it first:
+# pip install flask-sqlalchemy
+
+# the first database i used  in the devlopment is sqlite which is file based database
+# means it stores my data base in file (binary format) and the path to that file
+# is on the application configs
+# use the script ./setup_db.py for intial the database and tables of the models
