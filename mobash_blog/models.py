@@ -48,3 +48,13 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+    
+    def to_dict(self):
+        ''' dict represination of the object'''
+        author = User.query.filter_by(id=self.user_id).first().username
+        return {
+            "author":author,
+            "title":self.title,
+            "content":self.content,
+            "date_posted":self.date_posted
+        }
